@@ -1,0 +1,15 @@
+* text=auto
+*.cs text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.png binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.zip binary
+# Preserve the bytes recorded by the release evidence manifest.
+/windows/qa*/** -text
+/delivery-manifest-v0.4.1.json -text

@@ -1,0 +1,185 @@
+{
+  "version": "0.4.1",
+  "release_status": "local_desktop_qa_passed",
+  "verified_on": "2026-10-11",
+  "environment": "Windows 11 25H2 26200.9457; 200% DPI",
+  "zip_members": [
+    "Screenline.exe",
+    "Screenline.exe.config",
+    "README.md",
+    "QUALITY.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.txt"
+  ],
+  "zip_matches_dist": true,
+  "annotation_tested_binary_matches_dist": true,
+  "editor_preview_binary_matches_dist": true,
+  "async_pipeline_tested_binary_matches_dist": true,
+  "performance": {
+    "baseline_version": "0.4.0.0",
+    "current_version": "0.4.1.0",
+    "current_binary_sha256": "9ab75b8ae697326ee1f36a892742aedcb3125f05d40afaee48d46edce8550046",
+    "baseline_binary_sha256": "fdd8858bc2e7b4d7d132e4ce6345a3adde1f19214560bab06137be456b3ddca6",
+    "source": "Synthetic 3840x2160 BGRA gradients with fine grain",
+    "samples_per_version": 3,
+    "ui_measurement": "16 ms DispatcherPriority.Input timer; maximum observed heartbeat gap within each add; median of three trials",
+    "measurements": {
+      "add_ms": {
+        "baseline_median_ms": 787.22,
+        "current_median_ms": 406.94,
+        "reduction_percent": 48.3
+      },
+      "ui_max_gap_ms": {
+        "baseline_median_ms": 787.28,
+        "current_median_ms": 31.57,
+        "reduction_percent": 96.0
+      },
+      "duplicate_ms": {
+        "baseline_median_ms": 539.63,
+        "current_median_ms": 29.54,
+        "reduction_percent": 94.5
+      }
+    },
+    "limits": [
+      "Image creation and screen capture are outside the measured add operation",
+      "Heartbeat gaps are not presented-frame measurements or a 60 FPS guarantee",
+      "Local synthetic-image results; image content, disk and machine affect performance"
+    ]
+  },
+  "native_gallery": {
+    "run_id": "898ca61377134416b01c7d931008e90f",
+    "status": "passed",
+    "background": "Owned synthetic light and dark windows"
+  },
+  "checks": {
+    "desktop_regression": {
+      "passed": 26,
+      "total": 26,
+      "evidence": "windows/qa/evidence/ui-tests.json"
+    },
+    "visual_interaction": {
+      "passed": 18,
+      "total": 18,
+      "evidence": "windows/qa-visual/evidence/visual-tests.json"
+    },
+    "capture_flight_and_annotations": {
+      "passed": 25,
+      "total": 25,
+      "evidence": "windows/qa-features/evidence/feature-tests.json"
+    },
+    "annotation_output_and_undo": {
+      "passed": 14,
+      "total": 14,
+      "evidence": "windows/qa-annotation/annotation-tests.json"
+    },
+    "material_pixels": {
+      "passed": 4,
+      "total": 4,
+      "evidence": "windows/qa-material/evidence/material-tests.json"
+    },
+    "async_image_pipeline": {
+      "passed": 7,
+      "total": 7,
+      "evidence": "windows/qa-async/async-store-tests.json"
+    }
+  },
+  "total_checks_passed": 94,
+  "limits": [
+    "Mixed-DPI and negative-origin monitors not physically verified",
+    "Explorer, Recycle Bin and specific chat-app OLE targets not verified",
+    "Windows 10 and system high-contrast toggling not physically verified",
+    "Unsigned portable application; no auto-updater"
+  ],
+  "files": [
+    {
+      "path": "Screenline-Windows-0.4.1.zip",
+      "bytes": 83081,
+      "sha256": "34b61245d6b3b1a1f576b77aa75ab7ebe7612b6309b293338831bb814ebf83ee"
+    },
+    {
+      "path": "windows/dist/Screenline.exe",
+      "bytes": 137728,
+      "sha256": "9ab75b8ae697326ee1f36a892742aedcb3125f05d40afaee48d46edce8550046"
+    },
+    {
+      "path": "windows/qa/evidence/ui-tests.json",
+      "bytes": 1591,
+      "sha256": "25e8633cd93d8ecdf002249226b623f0c25ff73588034ea1bf014f698b3dec64"
+    },
+    {
+      "path": "windows/qa-visual/evidence/visual-tests.json",
+      "bytes": 1601,
+      "sha256": "fec6f2865667f1950afa645ea8a98093b1620a41c8ab1f4a09424daee57590ae"
+    },
+    {
+      "path": "windows/qa-features/evidence/feature-tests.json",
+      "bytes": 1986,
+      "sha256": "743ea90b7c2f2e1a91ba5623013bc2df928af0b15629310f40e6a1b31f1b89ef"
+    },
+    {
+      "path": "windows/qa-annotation/annotation-tests.json",
+      "bytes": 781,
+      "sha256": "447bfdff5f010816b4d6e4e4e7c511c2fbe3054a6c6e624bfacddd99bfbd19dc"
+    },
+    {
+      "path": "windows/qa-material/evidence/material-tests.json",
+      "bytes": 482,
+      "sha256": "d940602c99eb1c6487a5cde31a7423c8203f8c4ea23f1cbeffc9b5521bb0008d"
+    },
+    {
+      "path": "windows/qa-async/async-store-tests.json",
+      "bytes": 487,
+      "sha256": "8e5a588bfdc9393619b71c9884dcb94d2b4cf22eaa75b1bb8e688e677929ccd0"
+    },
+    {
+      "path": "windows/qa-gallery/evidence/gallery-light.png",
+      "bytes": 63036,
+      "sha256": "f464294866424c607f96d639a03ee4eaecd060482ecc8f716a07e9c58cb14ce4"
+    },
+    {
+      "path": "windows/qa-gallery/evidence/gallery-dark.png",
+      "bytes": 71218,
+      "sha256": "2f4eb82f93957b3cf177e092f2c9c5e362f6b3ff93c37b9036a4121d82a5d6a6"
+    },
+    {
+      "path": "windows/qa-features/evidence/screenline-0.4.1-flight.gif",
+      "bytes": 459793,
+      "sha256": "e60b6007c7f44bbd2088508638908beb4f929eaa64082cd04d98a2af41c07b03"
+    },
+    {
+      "path": "windows/qa-visual/evidence/screenline-0.4.1.gif",
+      "bytes": 998650,
+      "sha256": "733bc6d23ad54a60ce1091284f9d2248fd91b68286822578b6248643f9d6d972"
+    },
+    {
+      "path": "windows/qa-design/evidence/editor-preview.png",
+      "bytes": 56935,
+      "sha256": "75fa434d6af73f98523cd93f473edb5bb68abbd92d59c757fcdc6e6b7c7bee48"
+    },
+    {
+      "path": "windows/qa-design/evidence/editor-annotated.png",
+      "bytes": 64783,
+      "sha256": "72f20c7618659a9a978de93801068139da0bf243d0bf282b9570b3dbf4f4341b"
+    },
+    {
+      "path": "windows/qa-design/evidence/comparison-light.png",
+      "bytes": 106628,
+      "sha256": "014c9ea0a9ba7bcf4c5557c21b4e78d1047b3fc5acbcee5f989bafbf3d5e287b"
+    },
+    {
+      "path": "windows/qa-design/evidence/comparison-dark.png",
+      "bytes": 106117,
+      "sha256": "41c1cfbd6a29e3d367684a076d2b653fa0dfffaab5477fc42a875c8b2d315856"
+    },
+    {
+      "path": "windows/qa-performance/report.json",
+      "bytes": 1195,
+      "sha256": "1028aecc6c09e7ca5e11d805060f17955e065f9b52e4775fa0d4f04096790e30"
+    },
+    {
+      "path": "windows/qa-performance/current/image-pipeline.json",
+      "bytes": 436,
+      "sha256": "cdeddcbf79f076a11de1ab20639375c4f9f91a5627166fef8cb6db9623c14591"
+    }
+  ]
+}

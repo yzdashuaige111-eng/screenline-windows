@@ -1,0 +1,31 @@
+{
+  "baseline_version": "0.4.0.0",
+  "current_version": "0.4.1.0",
+  "current_binary_sha256": "9ab75b8ae697326ee1f36a892742aedcb3125f05d40afaee48d46edce8550046",
+  "baseline_binary_sha256": "fdd8858bc2e7b4d7d132e4ce6345a3adde1f19214560bab06137be456b3ddca6",
+  "source": "Synthetic 3840x2160 BGRA gradients with fine grain",
+  "samples_per_version": 3,
+  "ui_measurement": "16 ms DispatcherPriority.Input timer; maximum observed heartbeat gap within each add; median of three trials",
+  "measurements": {
+    "add_ms": {
+      "baseline_median_ms": 787.22,
+      "current_median_ms": 406.94,
+      "reduction_percent": 48.3
+    },
+    "ui_max_gap_ms": {
+      "baseline_median_ms": 787.28,
+      "current_median_ms": 31.57,
+      "reduction_percent": 96.0
+    },
+    "duplicate_ms": {
+      "baseline_median_ms": 539.63,
+      "current_median_ms": 29.54,
+      "reduction_percent": 94.5
+    }
+  },
+  "limits": [
+    "Image creation and screen capture are outside the measured add operation",
+    "Heartbeat gaps are not presented-frame measurements or a 60 FPS guarantee",
+    "Local synthetic-image results; image content, disk and machine affect performance"
+  ]
+}

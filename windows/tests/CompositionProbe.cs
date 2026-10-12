@@ -1,0 +1,1 @@
+class CompositionProbe { [System.STAThread] static void Main(){var c=new Windows.UI.Composition.Compositor();var v=c.CreateSpriteVisual();v.Size=new System.Numerics.Vector2(120,80);System.Console.WriteLine(c.CreateHostBackdropBrush());} }

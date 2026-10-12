@@ -1,0 +1,23 @@
+[
+  {
+    "name": "系统合成接口已成功启用",
+    "pass": true
+  },
+  {
+    "name": "照片边缘真实模糊合成背景条纹",
+    "pass": true,
+    "contrast_ratio": 0.13030210333546238,
+    "row": 67,
+    "pixels": 302
+  },
+  {
+    "name": "透明留白未被系统材质染色",
+    "pass": true,
+    "mean_pixel_difference": 0.0
+  },
+  {
+    "name": "玻璃边缘具有实际可见变化",
+    "pass": true,
+    "changed_rim_pixels": 2888
+  }
+]
