@@ -1,15 +1,35 @@
-# Screenline · 截图晾台
+<p align="center"><sub>WINDOWS DESKTOP UTILITY</sub></p>
 
-**改编自 [Alejandro Buján](https://github.com/alejandrobujan) 的开源项目 [Tendedero](https://github.com/alejandrobujan/tendedero)，为 Windows 重新实现的截图晾衣绳工具。** 原项目的交互与产品设计归原作者；本项目用 C#、WPF、Win32 和 OLE 实现 Windows 适配，独立维护，不代表原作者或获得其背书。
+<h1 align="center">Screenline · 截图晾台</h1>
 
-An independent Windows adaptation of **Tendedero by Alejandro Buján**. Original concept and interaction design are credited to the upstream author. Screenline uses a different name, its own icon, and an independently implemented Windows codebase.
+<p align="center"><strong>把截图挂在屏幕顶边，随手复制、标注与拖放。</strong><br>
+A screenshot clothesline for Windows.</p>
 
-[下载 Windows 便携版](https://github.com/yzdashuaige111-eng/screenline-windows/releases/latest) · [操作说明](windows/README.md) · [性能报告](windows/qa-performance/REPORT.md) · [来源与署名](docs/ATTRIBUTION.md)
+<p align="center">
+  <a href="https://github.com/yzdashuaige111-eng/screenline-windows/releases/latest"><strong>下载 Windows 便携版 →</strong></a>
+  &nbsp;·&nbsp; <a href="#安装">快速开始</a>
+  &nbsp;·&nbsp; <a href="windows/README.md">使用手册</a>
+  &nbsp;·&nbsp; <a href="docs/ATTRIBUTION.md">项目来源</a>
+</p>
+
+<p align="center"><sub>Windows 10/11 x64 &nbsp; / &nbsp; .NET Framework 4.8 &nbsp; / &nbsp; MIT</sub></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="windows/qa-gallery/evidence/gallery-dark.png">
-  <img src="windows/qa-gallery/evidence/gallery-light.png" alt="Screenline Windows 版：三张截图以原比例挂在屏幕顶边的细绳上。">
+  <img src="windows/qa-gallery/evidence/gallery-light.png" alt="Screenline：三张截图以原比例挂在屏幕顶边，支持深色与浅色主题。" width="100%">
 </picture>
+
+<p align="center"><sub>截图留在视线里，需要时展开，用完后收起。</sub></p>
+
+改编自 **[Alejandro Buján](https://github.com/alejandrobujan)** 的 **[Tendedero](https://github.com/alejandrobujan/tendedero)**。原项目交互与产品设计归原作者；本项目以 C# / WPF / Win32 / OLE 独立实现 Windows 适配，使用自己的名称与图标，独立维护，不代表原作者或获得其背书。
+
+---
+
+## 从截图到分享，少一点来回切换
+
+| 收纳 | 标注 | 传递 |
+| --- | --- | --- |
+| 区域截图飞入晾台，也可监听剪贴板与目录 | 长按进入标注，支持画笔、文字、形状与裁剪 | 单击复制原图，拖动交给支持图片或文件的应用 |
 
 ## 安装
 
@@ -42,7 +62,11 @@ An independent Windows adaptation of **Tendedero by Alejandro Buján**. Original
 
 以上图片和 GIF 均来自本项目程序与合成测试素材，不含原项目图标或文档图片。GIF 用于展示过程，不作为实际帧率测量。
 
-## 0.4.1 性能优化
+## 性能与验证
+
+<details>
+<summary><strong>查看 0.4.1 性能变化与测量边界</strong></summary>
+
 
 图片解码、哈希、PNG 编码和写盘移到后台，重复图片提前去重；截图飞入使用局部透明窗口，减少逐帧布局更新；缓存系统材质几何，修正透明窗口点击命中。
 
@@ -56,7 +80,10 @@ An independent Windows adaptation of **Tendedero by Alejandro Buján**. Original
 
 UI 心跳用于观察界面阻塞，不代表实际屏幕帧率。图片生成和屏幕像素读取不计入收纳耗时，结果仅代表本机合成图片测试。详见 [性能测量](windows/qa-performance/REPORT.md)。
 
-## 构建与验证
+</details>
+
+## 从源码构建
+
 
 Windows PowerShell / PowerShell 7，在仓库根目录运行：
 
