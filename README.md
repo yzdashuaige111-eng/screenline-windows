@@ -33,7 +33,13 @@ A screenshot clothesline for Windows.</p>
 
 ## 安装
 
-在 [Releases](https://github.com/yzdashuaige111-eng/screenline-windows/releases) 下载 `Screenline-Windows-0.4.1.zip`，解压到可写目录，运行 `Screenline.exe`。
+当前公开发行版为 [v0.4.1](https://github.com/yzdashuaige111-eng/screenline-windows/releases/tag/v0.4.1)。
+
+1. 下载该版本的 `Screenline-Windows-0.4.1.zip`，完整解压到可写目录。
+2. 双击 `Screenline.exe`；首次启动会显示空晾台，程序同时出现在系统托盘。
+3. 按 **Ctrl+Alt+S** 拖选一块区域。松开后，截图进入晾台；单击即可复制。
+
+发行页附有 `SHA256SUMS.txt` 和逐文件清单。可在 PowerShell 中用 `Get-FileHash .\Screenline-Windows-0.4.1.zip -Algorithm SHA256` 与该版本的校验值比对。
 
 需要 **Windows 10/11 x64、.NET Framework 4.8**。当前实测环境为 Windows 11 25H2、200% 缩放；Windows 10 和混合 DPI 多显示器尚未完成设备验收。程序未签名。
 
@@ -53,6 +59,14 @@ A screenshot clothesline for Windows.</p>
 | 托盘菜单 | 导入图片、设置剪贴板/目录监听、减少动画、退出 |
 
 也可使用 **Win+Shift+S**，由剪贴板监听收纳；外部截图没有可靠的选区坐标。开启监听后会接收所有新的位图，可在设置中关闭。晾台保留最近 60 张记录；移除条目不删除导入的源文件。
+
+## 本地数据与更新
+
+图片、设置和错误日志位于程序旁的 `data/`，导出文件默认位于 `data/exports/`。更新前退出程序，保留并备份整个 `data/`，再替换程序文件。
+
+最近 60 张记录可跨重启恢复。较旧副本仍可能保留在 `data/images/`；当前版本没有磁盘配额或自动清理，可从托盘打开缓存目录管理。移除晾台条目会保留导入的源文件。
+
+剪贴板监听会接收所有新位图，可在设置中关闭；目录监听只接收启动后新增或更新的图片。更多行为见 [使用手册](windows/README.md)。
 
 ## 预览与标注
 
@@ -99,6 +113,19 @@ Windows PowerShell / PowerShell 7，在仓库根目录运行：
 2026-10-11 的本机最终程序通过 **94 项**功能、真实鼠标交互、跨进程拖拽、截图像素、标注和材质检查。详见 [验收结果与覆盖边界](windows/QUALITY.md) 和 [发行校验清单](delivery-manifest-v0.4.1.json)。这些检查不能代替对所有设备和目标应用的验证。
 
 需要鼠标与桌面操作的测试及历史性能对照见 [开发与验收说明](docs/DEVELOPMENT.md)。
+
+## 常见问题
+
+- **晾台未显示**： 按 Ctrl+Alt+T，或将鼠标移到屏幕顶边；进入全屏应用时晾台会收起。退出请使用托盘菜单。
+- **系统截图没有从选区飞入**： Win+Shift+S 的剪贴板结果没有可靠的原始选区坐标；需要该动画时使用应用内 Ctrl+Alt+S。
+- **拖到其他应用没有效果**： 目标应用需要接受图片或文件格式。具体聊天应用、Explorer 和回收站仍有待专项验收。
+- **反馈问题**： 在 [Issues](https://github.com/yzdashuaige111-eng/screenline-windows/issues) 附上版本、Windows 版本、缩放比例、显示器布局和复现步骤；分享截图或日志前检查其中的个人内容。
+
+## 文档导航
+
+- [完整使用手册](windows/README.md)：操作、缓存、标注与平台差异。
+- [开发与验收](docs/DEVELOPMENT.md) · [质量记录](windows/QUALITY.md)：构建、验证方法与覆盖边界。
+- [版本记录](CHANGELOG.md) · [来源说明](docs/ATTRIBUTION.md)。
 
 ## 来源与授权
 
